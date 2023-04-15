@@ -68,3 +68,27 @@
 .fairy{
   background-color: rgb(255 148 191);
 }
+.hero{
+    position: relative; 
+    display: flex;
+    
+}
+
+.hero::before {    
+  content: "";
+  background-image: url('./images/white-logo.png');
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.front{
+  z-index: 2;
+}
+

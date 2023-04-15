@@ -1,14 +1,17 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+// Images
+import background from '../images/white-logo.png'
 
 const Pokemon = ({ pokemon }) => {
     return (
         <>
             <Card 
-            className={`${pokemon.types[0].type.name} my-3 p-3 rounded text-center shadow mb-5`}
-            style={{ border: 'none' }}
+            className={`${pokemon.types[0].type.name} my-3 p-3 rounded text-center shadow mb-5 hero`}
+            style={{ border: 'none'}}
             >
+                <div className='front'>
                 <Link to={`/pokemon/${pokemon.id}`}>
                     <Card.Img
                         style={{ width: '8rem' }}
@@ -24,6 +27,7 @@ const Pokemon = ({ pokemon }) => {
                         </Card.Title>
                     </Link>
                 </Card.Body>
+                </div>
             </Card>
         </>
     )
