@@ -1,8 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// Images
-import background from '../images/white-logo.png'
+
 
 const Pokemon = ({ pokemon }) => {
     return (
@@ -22,7 +21,7 @@ const Pokemon = ({ pokemon }) => {
                     <Link to={`/pokemon/${pokemon.id}`} className='link-name'>
                         <Card.Title as='div'>
                             <strong>
-                                #{pokemon.id} {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+                                {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
                             </strong>
                         </Card.Title>
                     </Link>

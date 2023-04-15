@@ -17,6 +17,8 @@
 .link-name:hover{
   cursor: pointer;
   color: rgb(227, 227, 227);
+  text-decoration: underline;
+  font-size: 1.4rem;
 }
 
 /* Extra Background Colors */
@@ -91,4 +93,14 @@
 .front{
   z-index: 2;
 }
+.stat-name, .stat-detail{
+  text-align: left;
+}
+
+.stat-name{
+  color: #635f5e;
+  font-size: medium;
+  font-weight: 500;
+}
+
 

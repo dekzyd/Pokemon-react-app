@@ -27,11 +27,14 @@ const PokemonPage = () => {
 
     useEffect(() => {
         getPokemon(id);
+        console.log(pokemonDetails)
     }, [])
+
+
 
     return (
         <>
-            {loading ? (
+            { loading ? (
                 <Loader/>
             ) : (
                 <Row>
@@ -89,19 +92,27 @@ const PokemonPage = () => {
                                                 className='px-4 py-1 rounded' 
                                                 style={{ border: '1px black solid' }}>
                                                 Abilities
-
                                             </div>
                                         </Col>
                                     </Row>
                                 
+                                    {/* test */}
                                     <Row>
-                                        {pokemonDetails.abilities.map(a => (
-                                            <Col key={a.ability.name} xs={6} sm={6} md={6} lg={6} xl={6}>
-                                                <div className={`${a.ability.name} rounded px-4 py-1`}>
-                                                    {a.ability.name.toUpperCase()}
-                                                </div>
+                                            <Col className='rounded px-4 py-1 stat-name' xs={6} sm={6} md={6} lg={6} xl={6}>
+                                                <p>Species</p>
+                                                <p>Height</p>
+                                                <p>Weight</p>
+                                                <p>Abilities</p>
+                                                
                                             </Col>
-                                        ))}
+                                            <Col className='rounded px-4 py-1 stat-detail' xs={6} sm={6} md={6} lg={6} xl={6}>
+                                                <p>{pokemonDetails.species.name.charAt(0).toUpperCase() + pokemonDetails.species.name.slice(1)}</p>
+                                                <p>{pokemonDetails.height}</p>
+                                                <p>{pokemonDetails.weight}</p>
+                                                <p>{pokemonDetails.abilities.map(d => (
+                                                    <span>{d.ability.name.charAt(0).toUpperCase() + d.ability.name.slice(1) + ". "} </span>
+                                                ))}</p>
+                                            </Col>
                                     </Row>
                                    
                                 </Card.Text>
