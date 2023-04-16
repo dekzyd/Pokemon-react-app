@@ -17,7 +17,6 @@ const Homepage = () => {
             pokemonArray.push(await getPokemonData(i));
         }
 
-        console.log(pokemonArray);
         setPokemon(pokemonArray);
         setLoading(false);
     }

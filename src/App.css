@@ -97,10 +97,27 @@
   text-align: left;
 }
 
+.stat-numbers {
+  text-align: left;
+  font-size: medium;
+  font-weight: 500;
+}
+
 .stat-name{
   color: #635f5e;
   font-size: medium;
   font-weight: 500;
 }
 
+.stat_container{
+  height: 320px;
+  padding: 20px;
+}
 
+.subheading{
+  margin: 20px 0px;
+}
+
+.progress-bars{
+  padding: 20px 0px;
+}
