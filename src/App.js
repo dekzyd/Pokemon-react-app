@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 //Pages
-import Homepage from './pages/Homepage';
-import PokemonPage from './pages/PokemonPage';
+import Homepage from './components/Homepage';
+import PokemonPage from './components/PokemonPage';
 import Header from './components/Header';
 
 const App = () => {

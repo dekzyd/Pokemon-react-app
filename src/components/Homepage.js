@@ -3,8 +3,8 @@ import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 
 // Components
-import Pokemon from '../components/Pokemon';
-import Loader from "../components/Loader";
+import Pokemon from './Pokemon';
+import Loader from './Loader';
 
 const Homepage = () => {
 

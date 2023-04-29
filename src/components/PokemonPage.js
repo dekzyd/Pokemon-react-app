@@ -10,7 +10,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 // Components
-import Loader from '../components/Loader';
+import Loader from './Loader';
 
 
 const PokemonPage = () => {
