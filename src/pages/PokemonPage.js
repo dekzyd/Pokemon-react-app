@@ -12,12 +12,15 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 // Components
 import Loader from '../components/Loader';
 
+
 const PokemonPage = () => {
+    
 
     const match = useMatch("/pokemon/:userId");
     const id = match.params.userId;
     const [pokemonDetails, setPokemonDetails] = useState();
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const getPokemon = async (id) => {
         const details = await getPokemonData(id);
@@ -26,8 +29,13 @@ const PokemonPage = () => {
     }
     
     const getPokemonData = async (id) => {
-        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
-        return res;
+        try {
+            const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+            return res;
+        }
+        catch(error) {
+            setError(error.message);
+        }
     }
     
     useEffect(() => {
@@ -38,7 +46,15 @@ const PokemonPage = () => {
 
     return (
         <>
-            { loading ? (
+            { error ? (
+                <Row>
+                    <Col className="error_msg" xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <h2>Pokemon not found: {error} </h2>
+                        <p>Click Pokedex to go home.</p>
+                    </Col>
+                </Row>
+            ) :
+            loading ? (
                 <Loader/>
             ) : (
                 <Row>

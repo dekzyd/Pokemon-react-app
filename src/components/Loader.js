@@ -10,18 +10,17 @@ const Loader = () => {
             <Row>
                 <Col>
                     <Spinner
-                        className='spinner-border spinner-border-lg'
+                        className='spinner-border spinner-border-lg spinner_msg'
                         role='status'
-                        style={{ height: '5vh', width: '5vh' }}
+                        style={{ height: '8vh', width: '8vh' }}
                     >
-
                     </Spinner>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <div className='mx-3'>
-                        Fetching Pokemon...
+                    <div className='mx-3 spinner_msg'>
+                        <h3>Fetching Pokemon...</h3>
                     </div>
                 </Col>
             </Row>
